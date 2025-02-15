@@ -1,11 +1,4 @@
-//Credit By Akira
-//Roy
-//Riu
-//MhankBarBar
-//LolHuman
-//Itsmeiky
-//Vhtear
-//Credit Jangan dihapus Anjenk!!!
+//Credit By banxris
 
 //wa connection
 const {
@@ -29,16 +22,16 @@ const fs = require("fs")
 const crypto = require('crypto')
 const imageToBase64 = require('image-to-base64')
 const axios = require('axios')
-const { color, bgcolor } = require('./akiraganz/color')
-const { animesaran } = require('./akiraganz/animesaran')
-const { animesaran2 } = require('./akiraganz/animesaran2')
-const { help } = require('./akiraganz/help')
-const { rules } = require('./akiraganz/rules')
-const { sewabot } = require('./akiraganz/sewabot')
-const { listsurah } = require('./akiraganz/listsurah')
-const { donasi } = require('./akiraganz/donasi')
-const { fetchJson } = require('./akiraganz/fetcher')
-const { recognize } = require('./akiraganz/ocr')
+const { color, bgcolor } = require('./banxris/color')
+const { animesaran } = require('./banxris/animesaran')
+const { animesaran2 } = require('./banxris/animesaran2')
+const { help } = require('./banxris/help')
+const { rules } = require('./banxris/rules')
+const { sewabot } = require('./banxris/sewabot')
+const { listsurah } = require('./banxris/listsurah')
+const { donasi } = require('./banxris/donasi')
+const { fetchJson } = require('./banxris/fetcher')
+const { recognize } = require('./banxris/ocr')
 const { exec } = require("child_process")
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./akiraganz/functions')
 const tiktod = require('tiktok-scraper')
@@ -47,23 +40,23 @@ const ffmpeg = require('fluent-ffmpeg')
 const imgbb = require('imgbb-uploader')
 const cd = 4.32e+7
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const { ind } = require('./akira')
+const { ind } = require('./banxris')
 
 //apikey
 const apivhtear = 'YTReihanS' // Vhtear Beli Sendiri Yoo
 const ZeksApi = 'apivinz'
 const TobzKey = 'BotWeA'
-const lolhuman = 'AkiraYT' //Free Trial 3 day
-const onlydev = 'YTAkira' //Free Trial 3 day
-const xteam = 'AkiraBotWa' //Free Trial 3 day
-const namabot = 'Akira Bot'
+const lolhuman = 'BanxrisYT' //Free Trial 3 day
+const onlydev = 'YTBanxris' //Free Trial 3 day
+const xteam = 'BanxrisBotWa' //Free Trial 3 day
+const namabot = 'Banxris Bot'
 
 //kontak
 const vcard = 'BEGIN:VCARD\n'  //Jangan diganti,Ntar error
             + 'VERSION:3.0\n'  //Jangan diganti,Ntar error
-            + 'FN:Akira\n'  // Ganti jadi namamu
-            + 'ORG:Pengembang ${namabot};\n'  // Ganti jadi namamu/Botmu
-            + 'TEL;type=CELL;type=VOICE;waid=6282158549899:+6282158549899\n'  // Ganti jadi nomormu, tapi jangan ubah polanya
+            + 'FN:banxris\n'  // Ganti jadi namamu
+            + 'ORG:Pengembang ${Banxrisbot};\n'  // Ganti jadi namamu/Botmu
+            + 'TEL;type=CELL;type=VOICE;waid=6285712903056:+6281214676106\n'  // Ganti jadi nomormu, tapi jangan ubah polanya
             + 'END:VCARD' // Jangan diganti,Ntar Error
             
 //settings            
@@ -71,11 +64,11 @@ prefix = '#'
 blocked = []   
 limitawal = '500' //Terserah Mo Ganti apa kgk
 memberlimit = 1 //Terserah Mo Ganti apa kgk
-cr = '*Akira Bot By Akira*'
-vr = '*Akira Bot Wa*\n*Subscribe My Channel Akira*'
+cr = '*Banxris Bot By Banxris*'
+vr = '*Banxris Bot Wa*\n*join My group Banxris*'
 
 //owner number
-const ownerNumber = ["6282158549899@s.whatsapp.net"]  //Ganti Jadi Nomormu
+const ownerNumber = ["6285712903056@s.whatsapp.net"]  //Ganti Jadi Nomormu
 
 //file json
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
@@ -371,10 +364,10 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 			const tescuk = ["0@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const q = args.join(' ')
-			const botNumber = akira.user.jid
+			const botNumber = banxris.user.jid
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-			pushname = akira.contacts[sender] != undefined ? akira.contacts[sender].vname || akira.contacts[sender].notify : undefined
-			const groupMetadata = isGroup ? await akira.groupMetadata(from) : ''
+			pushname = banxris.contacts[sender] != undefined ? banxris.contacts[sender].vname || banxris.contacts[sender].notify : undefined
+			const groupMetadata = isGroup ? await banxris.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
@@ -400,22 +393,22 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
 			}
 			const reply = (teks) => {
-				akira.sendMessage(from, teks, text, {quoted:mek})
+				banxris.sendMessage(from, teks, text, {quoted:mek})
 			}
 			const sendMess = (hehe, teks) => {
-				akira.sendMessage(hehe, teks, text)
+				banxris.sendMessage(hehe, teks, text)
 			}
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? akira.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : akira.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 			const sendImage = (teks) => {
-		    akira.sendMessage(from, teks, image, {quoted:mek})
+		    banxris.sendMessage(from, teks, image, {quoted:mek})
 		    }
 		    const costum = (pesan, tipe, target, target2) => {
-			akira.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` }}})
+			banxris.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` }}})
 			}
 		    const sendPtt = (teks) => {
-		    akira.sendMessage(from, audio, mp3, {quoted:mek})
+		    banxris.sendMessage(from, audio, mp3, {quoted:mek})
 		    }
 	        /*****************END SCURITY FEATURE ********/
 
@@ -445,8 +438,8 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
                     for (let lmt of _limit) {
                         if (lmt.id === sender) {
                             let limitCounts = limitawal - lmt.limit
-                            if (limitCounts <= 0) return akira.sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
-                            akira.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                            if (limitCounts <= 0) return banxris.sendMessage(from,`Limit request anda sudah habis\n\n_Note : Limit akan direset setiap jam 21:00!_`, text,{ quoted: mek})
+                            banxris.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                             found = true
                         }
                     }
@@ -466,7 +459,7 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
               	let limits = i.limit
               if (limits >= limitawal ) {
               	  position = true
-                    akira.sendMessage(from, ind.limitend(pushname), text, {quoted: mek})
+                    banxris.sendMessage(from, ind.limitend(pushname), text, {quoted: mek})
                     return true
               } else {
               	_limit
@@ -507,18 +500,18 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 		        var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		        reply(`Maaf kak ${sender.split("@")[0]} Grup ini anti link, siap siap kamu di kick`)
 		        setTimeout( () => {
-			        akira.groupRemove(from, [kic]).catch((e)=>{reply(`*${namabot} HARUS JADI ADMINâ—*`)})
+			        banxris.groupRemove(from, [kic]).catch((e)=>{reply(`*${namabot} HARUS JADI ADMINâ—*`)})
 		        }, 3000)
 		        setTimeout( () => {
-			        akira.updatePresence(from, Presence.composing)
+			        banxris.updatePresence(from, Presence.composing)
 			        reply("Hedsot....")
 		        }, 2000)
 		        setTimeout( () => {
-			        akira.updatePresence(from, Presence.composing)
+			        banxris.updatePresence(from, Presence.composing)
 			        reply("Bismillah...")
 		        }, 1000)
 		        setTimeout( () => {
-			        akira.updatePresence(from, Presence.composing)
+			        banxris.updatePresence(from, Presence.composing)
 			        reply("Ready?...")
 		        }, 0)
 		  }
@@ -529,26 +522,26 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 					    if (getmemex <= memberlimit) {
 						reply(`hmmm...`)
 						setTimeout( () => {
- 	                           akira.groupLeave(from) 
+ 	                           banxris.groupLeave(from) 
  					   	}, 5000)
 								setTimeout( () => {
-								akira.updatePresence(from, Presence.composing)
+								banxris.updatePresence(from, Presence.composing)
 								reply("byee")
 							}, 4000)
 								setTimeout( () => {
-								akira.updatePresence(from, Presence.composing)
+								banxris.updatePresence(from, Presence.composing)
 								reply("awokaowkaowk")
 							}, 3000)
 								setTimeout( () => {
-								akira.updatePresence(from, Presence.composing)
+								banxris.updatePresence(from, Presence.composing)
 								reply("semoga emak lu sehat")
 							}, 2000)
 								setTimeout( () => {
-								akira.updatePresence(from, Presence.composing)
+								banxris.updatePresence(from, Presence.composing)
 								reply("gw keluar ye")
 							}, 1000)
 								setTimeout( () => {
-								akira.updatePresence(from, Presence.composing)
+								banxris.updatePresence(from, Presence.composing)
 								reply(`sorry ngab member minimal ${memberlimit}`)
 							}, 0)
 					    }
@@ -607,7 +600,7 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 		username = args[0]
 		comment = args[2]
                     buffer = await getBuffer(`http://lolhuman.herokuapp.com/api/ytcomment?apikey=${lolhuman}&username=${username}&comment=${comment}&img=https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg`)
-                    akira.sendMessage(from, buffer, image, { quoted: mek})
+                    banxris.sendMessage(from, buffer, image, { quoted: mek})
                     break
                     case 'phkomen':
 		if (!isRegistered) return reply(ind.noregis())
@@ -615,13 +608,13 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
 		username = args[0]
 		comment = args[2]
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/phcomment?apikey=${lolhuman}&img=https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg&text=${comment}&username=${username}`)
-                    akira.sendMessage(from, buffer, image, { quoted: mek})
+                    banxris.sendMessage(from, buffer, image, { quoted: mek})
                     break
                     case 'amongus':
 		if (!isRegistered) return reply(ind.noregis())
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} Akira`)
                     buffer = await getBuffer(`http://lolhuman.herokuapp.com/api/amongus?apikey=${lolhuman}&text=${body.slice(9)}`)
-                    akira.sendMessage(from, buffer, sticker, { quoted: mek})
+                    banxris.sendMessage(from, buffer, sticker, { quoted: mek})
                     break
                     case 'artinama':
 		if (!isRegistered) return reply(ind.noregis())
@@ -682,7 +675,7 @@ sᴇᴍᴏɢᴀ ᴊᴀsᴀᴅᴍᴜ ʙᴀɪᴋ ʙᴀɪᴋ sᴀᴊᴀ ᴅᴀɴ s�
                     break
 case 'alay': 
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: Akira`)
+				if (args.length < 1) return reply(`Contoh: banxris`)
 					gatauda = body.slice(11)
 					anu = await fetchJson(`http://api.lolhuman.xyz/api/alay?apikey=${lolhuman}&text=${gatauda}`)
 					reply(anu.result)
@@ -690,7 +683,7 @@ case 'alay':
 					case 'purba':
 					case 'bpurba': 
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: Akira`)
+				if (args.length < 1) return reply(`Contoh: banxris`)
 					gatauda = body.slice(11)
 					anu = await fetchJson(`http://api.lolhuman.xyz/api/bahasapurba?apikey=${lolhuman}&text=${gatauda}`)
 					reply(anu.result)
@@ -699,21 +692,21 @@ case 'alay':
 					case 'bk':
 					case 'besarkecil': 
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: Akira`)
+				if (args.length < 1) return reply(`Contoh: banxris`)
 					gatauda = body.slice(11)
 					anu = await fetchJson(`http://api.lolhuman.xyz/api/upperlower?apikey=${lolhuman}&text=${gatauda}`)
 					reply(anu.result)
 					break
 					case 'hilih': 
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: Akira`)
+				if (args.length < 1) return reply(`Contoh: banxris`)
 					gatauda = body.slice(11)
 					anu = await fetchJson(`http://api.lolhuman.xyz/api/hilih?apikey=${lolhuman}&text=${gatauda}`)
 					reply(anu.result)
 					break
                case 'namaninja': 
 				if (!isRegistered) return reply(ind.noregis())
-				if (args.length < 1) return reply(`Contoh: Akira`)
+				if (args.length < 1) return reply(`Contoh: banxris`)
 					gatauda = body.slice(11)
 					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/ninja?apikey=${lolhuman}&nama=${gatauda}`)
 					reply(anu.result)
@@ -778,14 +771,14 @@ case 'alay':
                     } catch {
                         emoji = encodeURI(emoji)
                     }
-                    ini_akira = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${lolhuman}`)
-                    akira.sendMessage(from, ini_akira, sticker, {quoted: mek})
+                    ini_banxris = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${lolhuman}`)
+                    akira.sendMessage(from, ini_banxris, sticker, {quoted: mek})
                     break
                 case 'fakedonald':
                     if (args.length == 0) return reply(`Contoh: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
                     ini_akira = await getBuffer(`http://api.lolhuman.xyz/api/tweettrump?apikey=${lolhuman}&text=${ini_txt}`)
-                    akira.sendMessage(from, ini_akira, image, {quoted: mek})
+                    banxris.sendMessage(from, ini_banxris, image, {quoted: mek})
                     break
                 case 'faketoko':
                     await faketoko(teks = "Tahu Bacem", url_image = "https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg", title = "LoL Human", code = "IDR", price = 1000000)
@@ -809,8 +802,8 @@ case 'alay':
                     warga = get_args[13]
                     until = get_args[14]
                     img = get_args[15]
-                    ini_akira = await getBuffer(`http://api.lolhuman.xyz/api/ktpmaker?apikey=${lolhuman}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
-                    akira.sendMessage(from, ini_akira, image, {quoted: mek})
+                    ini_banxris = await getBuffer(`http://api.lolhuman.xyz/api/ktpmaker?apikey=${lolhuman}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
+                    akira.sendMessage(from, ini_banxris, image, {quoted: mek})
                     break
                 case 'xnxxsearch':
                     if (args.length == 0) return reply(`Contoh: ${prefix + command} Japanese`)
@@ -848,19 +841,19 @@ case 'alay':
                         ini_txt += `${x.type} - ${x.link}\n\n`
                     }
                     thumbnail = await getBuffer(get_result.thumbnail)
-                    akira.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
+                    banxris.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
                     break
                    case 'pixiv':
                     if (args.length == 0) return reply(`Contoh: ${prefix + command} loli kawaii`)
                     query = args.join(" ")
                     ini_akira = await getBuffer(`http://api.lolhuman.xyz/api/pixiv?apikey=${lolhuman}&query=${query}`)
-                    akira.sendMessage(from, ini_akira, image, {quoted: mek})
+                    banxris.sendMessage(from, ini_akira, image, {quoted: mek})
                     break
                 case 'pixivdl':
                     if (args.length == 0) return reply(`Contoh: ${prefix + command} 63456028`)
                     query = args[0]
-                    ini_akira = await getBuffer(`http://api.lolhuman.xyz/api/pixivdl/${pixivid}?apikey=${lolhuman}`)
-                    akira.sendMessage(from, ini_akira, image, {quoted: mek})
+                    ini_banxris = await getBuffer(`http://api.lolhuman.xyz/api/pixivdl/${pixivid}?apikey=${lolhuman}`)
+                    banxris.sendMessage(from, ini_banxris, image, {quoted: mek})
                     break
                 case 'xhamstersearch':
                     if (args.length == 0) return reply(`Contoh: ${prefix + command} Japanese`)
@@ -896,7 +889,7 @@ case 'alay':
                         ini_txt += `${x.type} - ${x.link}\n\n`
                     }
                     thumbnail = await getBuffer(get_result.thumbnail)
-                    akira.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
+                    banxris.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
                     break 
 					case 'pictwaifu':
 					if (!isRegistered) return reply(ind.noregis())
@@ -911,7 +904,7 @@ case 'alay':
 					break
 					case 'nsfw_avatar':
 		                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/random2/${command}?apikey=${lolhuman}`)
-		                    akira.sendMessage(from, buffer, image, { quoted: mek })
+		                    banxris.sendMessage(from, buffer, image, { quoted: mek })
 		                    break
 					case 'pictneko':
 					if (!isRegistered) return reply(ind.noregis())
@@ -922,7 +915,7 @@ case 'alay':
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nye = await getBuffer(ku)
-					akira.sendMessage(from, nye, image, { caption: 'OHAYO ONII CHAN!!', quoted: mek })
+					banxris.sendMessage(from, nye, image, { caption: 'OHAYO ONII CHAN!!', quoted: mek })
 					break
 			case 'senku':
 					if (!isRegistered) return reply(ind.noregis())
@@ -932,7 +925,7 @@ case 'alay':
 					var sen = JSON.parse(JSON.stringify(anu.result));
 					var ku =  sen[Math.floor(Math.random() * sen.length)];
 					nye = await getBuffer(ku)
-					akira.sendMessage(from, nye, image, { caption: 'senku!!', quoted: mek })
+					banxris.sendMessage(from, nye, image, { caption: 'senku!!', quoted: mek })
 					await limitAdd(sender)
 					break
 			case 'kurumi2':
@@ -942,7 +935,7 @@ case 'alay':
 					var kur = JSON.parse(JSON.stringify(anu.result));
 					var imi =  kur[Math.floor(Math.random() * kur.length)];
 					nye = await getBuffer(imi)
-					akira.sendMessage(from, nye, image, { caption: 'kurumi chan!!', quoted: mek })
+					banxris.sendMessage(from, nye, image, { caption: 'kurumi chan!!', quoted: mek })
 					break
 				case 'nakanomiku':
 				if (!isRegistered) return reply(ind.noregis())
@@ -951,7 +944,7 @@ case 'alay':
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nye = await getBuffer(ku)
-					akira.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
+					banxris.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
 					break
 			case 'wibu':
 				if (!isRegistered) return reply(ind.noregis())
@@ -961,7 +954,7 @@ case 'alay':
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result.foto)
 					wibu = ` ➸ *nama* ${anu.result.nama} ➸ *deskripsi* ${anu.result.deskripsi}`
-					akira.sendMessage(from, buffer, image, {quoted: mek, caption: wibu})
+					banxris.sendMessage(from, buffer, image, {quoted: mek, caption: wibu})
 					break
 			case 'quotes2':
 				if (!isRegistered) return reply(ind.noregis())
@@ -970,7 +963,7 @@ case 'alay':
 				quotes = body.slice(1)
 				const quo =['Lebih baik mengerti sedikit daripada salah mengerti.','Hampir semua pria memang mampu bertahan menghadapi kesulitan. Namun, jika Anda ingin menguji karakter sejati pria, beri dia kekuasaan.','Bila tekad seseorang kuat dan teguh, Tuhan akan bergabung dalam usahanya.','Penderitaan adalah pelajaran.','Ilmu pengetahuan tanpa agama adalah pincang.','Hidup itu seperti sebuah sepeda, agar tetap seimbang kita harus tetap bergerak.','Perbedaan masa lalu, sekarang, dan masa depan tak lebih dari ilusi yang keras kepala.','Sebuah meja, sebuah kursi, semangkuk buah, dan sebuah biola; apa lagi yang dibutuhkan agar seseorang bisa merasa bahagia?','Belas kasihanlah terhadap sesama, bersikap keraslah terhadap diri sendiri.','Cara paling baik untuk menggerakkan diri Anda ialah memberi tugas kepada diri sendiri.','Kita tidak boleh kehilangan semangat. Semangat adalah stimulan terkuat untuk mencintai, berkreasi dan berkeinginan untuk hidup lebih lama.','Manusia akan bahagia selama ia memilih untuk bahagia.','Saya tidak berharap menjadi segalanya bagi setiap orang. Saya hanya ingin menjadi sesuatu untuk seseorang.','Apabila sempurna akal seseorang, maka sedikit perkataannya.','Bahagialah orang yang dapat menjadi tuan untuk dirinya, menjadi kusir untuk nafsunya dan menjadi kapten untuk bahtera hidupnya.','Sahabat yang jujur lebih besar harganya daripada harta benda yang diwarisi dari nenek moyang.','Yang paling melelahkan dalam hidup adalah menjadi orang yang tidak tulus.','Terbuka untuk Anda, begitulah Tuhan memberi kita jalan untuk berusaha. Jangan pernah berfikir jalan sudah tertutup.','Penundaan adalah kuburan dimana peluang dikuburkan.','Cinta bukan saling menatap mata, namun melihat ke arah yang sama bersama-sama.','Kita adalah apa yang kita kerjakan berulang kali. Dengan demikian, kecemerlangan bukan tindakan, tetapi kebiasaan.','Jangan pernah mencoba menjadikan putra atau putri Anda menjadi seperti Anda. Diri Anda hanya cukup satu saja.','Jika Anda bisa membuat orang lain tertawa, maka Anda akan mendapatkan semua cinta yang Anda inginkan.','Masalah akan datang cepat atau lambat. Jika masalah datang, sambut dengan sebaik mungkin. Semakin ramah Anda menyapanya, semakin cepat ia pergi.','Kita tak bisa melakukan apapun untuk mengubah masa lalu. Tapi apapun yang kita lakukan bisa mengubah masa depan.','Kesabaran adalah teman dari kebijaksanaan.','Orang-orang kreatif termotivasi oleh keinginan untuk maju, bukan oleh keinginan untuk mengalahkan orang lain.','Dimanapun engkau berada selalulah menjadi yang terbaik dan berikan yang terbaik dari yang bisa kita berikan.','Kebencian seperti halnya cinta, berkobar karena hal-hal kecil.','Anda tidak perlu harus berhasil pada kali pertama.','Satu jam yang intensif, jauh lebih baik dan menguntungkan daripada bertahun-tahun bermimpi dan merenung-renung.','Hal terbaik yang bisa Anda lakukan untuk orang lain bukanlah membagikan kekayaan Anda, tetapi membantu dia untuk memiliki kekayaannya sendiri.','Tidak ada jaminan keberhasilan, tetapi tidak berusaha adalah jaminan kegagalan.','Aku tidak tahu kunci sukses itu apa, tapi kunci menuju kegagalan adalah mencoba membuat semua orang senang.']
 				const tes = quo[Math.floor(Math.random() * quo.length)]
-				akira.sendMessage(from, ''+tes+'\n\n_By : akiraganz._', text, { quoted: mek })
+				banxris.sendMessage(from, ''+tes+'\n\n_By : akiraganz._', text, { quoted: mek })
 				await limitAdd(sender)
 				break
 			case 'facebookpage':
@@ -982,7 +975,7 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/facebookprof/?urlgbr=${anu.display_url}&text=${tels}`)
@@ -1000,11 +993,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/customwp/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1018,11 +1011,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/nightbeach/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1036,11 +1029,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1054,11 +1047,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/burneffect/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1072,11 +1065,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/crossgun/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1090,11 +1083,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://leyscoders-api.herokuapp.com/api/img/hitler?url=${anu.display_url}&apikey=RJJKCXSU`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1108,11 +1101,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://leyscoders-api.herokuapp.com/api/img/trash?url=${anu.display_url}&apikey=RJJKCXSU`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1126,11 +1119,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://leyscoders-api.herokuapp.com/api/img/picture?url=${anu.display_url}&apikey=RJJKCXSU`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1144,11 +1137,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://leyscoders-api.herokuapp.com/api/img/blur?url=${anu.display_url}&apikey=RJJKCXSU`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1162,11 +1155,11 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`https://leyscoders-api.herokuapp.com/api/img/invert?url=${anu.display_url}&apikey=RJJKCXSU`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1180,13 +1173,13 @@ case 'alay':
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  ct = body.slice(6)
 	  atas = ct.split("/")[0];
       bawah = ct.split("/")[1];
 	  anu = await imgbb("3ea1465ef91578a90ee81f7d41c59a1f", owgi)
 	  hehe = await getBuffer(`http://docs-jojo.herokuapp.com/api/meme-gen?top=${atas}&bottom=${bawah}&img=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1199,11 +1192,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   hedhe = await getBuffer(`https://videfikri.com/api/textmaker/gtavposter/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, hedhe, image, {quoted:mek})
+ banxris.sendMessage(from, hedhe, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1216,7 +1209,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ger)
+  owgi = await banxris.downloadAndSaveMediaMessage(ger)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   teks = `${anu.display_url}`
   ranp = getRandom('.gif')
@@ -1226,7 +1219,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
 fs.unlinkSync(ranp)
 if (err) return reply(mess.error.stick)
 nobg = fs.readFileSync(rano)
-akira.sendMessage(from, nobg, sticker, {
+banxris.sendMessage(from, nobg, sticker, {
   quoted: mek
 })
 fs.unlinkSync(rano)
@@ -1244,11 +1237,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   hehpe = await getBuffer(`https://videfikri.com/api/textmaker/nightbeach/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, hehpe, image, {quoted:mek})
+ banxris.sendMessage(from, hehpe, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1261,11 +1254,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   dhehe = await getBuffer(`https://videfikri.com/api/textmaker/customwp/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, dhehe, image, {quoted:mek})
+ banxris.sendMessage(from, dhehe, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1278,11 +1271,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   hehet = await getBuffer(`https://videfikri.com/api/textmaker/3dlinephoto/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, hehet, image, {quoted:mek})
+ banxris.sendMessage(from, hehet, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1295,11 +1288,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   hehre = await getBuffer(`https://videfikri.com/api/textmaker/raindrop/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, hehre, image, {quoted:mek})
+ banxris.sendMessage(from, hehre, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1312,11 +1305,11 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(ind.wait())
-  owgi = await akira.downloadAndSaveMediaMessage(ted)
+  owgi = await banxris.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
   anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
   hehae = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
- akira.sendMessage(from, hehae, image, {quoted:mek})
+ banxris.sendMessage(from, hehae, image, {quoted:mek})
 } else {
   reply('reply imagenya kak!')
 }
@@ -1329,11 +1322,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/facebookprof/?urlgbr=${anu.display_url}&text=${tels}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1346,11 +1339,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/customwp/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1363,11 +1356,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/nightbeach/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1380,11 +1373,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(14)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1397,11 +1390,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/burneffect/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1414,11 +1407,11 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 	if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 	  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
 	  reply(ind.wait())
-	  owgi = await akira.downloadAndSaveMediaMessage(ted)
+	  owgi = await banxris.downloadAndSaveMediaMessage(ted)
 	  tels = body.slice(7)
 	  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
 	  hehe = await getBuffer(`https://videfikri.com/api/textmaker/crossgun/?urlgbr=${anu.display_url}`)
-	 akira.sendMessage(from, hehe, image, {quoted:mek})
+	 banxris.sendMessage(from, hehe, image, {quoted:mek})
 	} else {
 	  reply('Jangan tambah kan apapun pada command')
 	}
@@ -1431,7 +1424,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 					anu = await fetchJson(`https://api.vhtear.com/nhentaipdfdownload?query=${husw}&apikey=${apivhtear}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					bufferjj = await getBuffer(anu.result.pdf_file)
-					akira.sendMessage(from, bufferjj, document, {mimetype: 'document/pdf', quoted: mek})
+					banxris.sendMessage(from, bufferjj, document, {mimetype: 'document/pdf', quoted: mek})
 					break
 			case 'ramaljadian':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1461,7 +1454,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				ct = body.slice(11)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/ephoto1/galaxystyle?apikey=${lolhuman}&text=${ct}`)
-				akira.sendMessage(from, ct, image, {caption: 'Nih kak udah jadi..', quoted: mek})
+				banxris.sendMessage(from, ct, image, {caption: 'Nih kak udah jadi..', quoted: mek})
 				await limitAdd(sender)
 				break
 			case 'attp':
@@ -1470,7 +1463,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 				if (args.length < 1) return reply(`_Teksnya Mana Boss_\n*Contoh ${prefix}attp Wajahku Ganteng*`)
 				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
-				akira.sendMessage(from, attp2, sticker, {quoted: mek})
+				banxris.sendMessage(from, attp2, sticker, {quoted: mek})
 				break
 			case 'thunder':
                  if (!isRegistered) return reply(ind.noregis())
@@ -1480,7 +1473,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/thunder?apikey=${lolhuman}&text=${ct}`)
-				akira.sendMessage(from, ct, image, {quoted: mek})
+				banxris.sendMessage(from, ct, image, {quoted: mek})
 				await limitAdd(sender)
 				break
 				case 'ttp':
@@ -1490,7 +1483,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nContoh: ${prefix + command} Kata`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp?apikey=${lolhuman}&text=${txt}`)
-                    akira.sendMessage(from, buffer, sticker, { quoted: mek })
+                    banxris.sendMessage(from, buffer, sticker, { quoted: mek })
                     break
                  case 'ttp2':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1498,8 +1491,8 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nContoh: ${prefix + command} Kata`)
                     txt = args.join(" ")
-                    akira = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp2?apikey=${lolhuman}&text=${txt}`)
-                    akira.sendMessage(from, akira, sticker, { quoted: mek })
+                    banxris = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp2?apikey=${lolhuman}&text=${txt}`)
+                    banxris.sendMessage(from, banxris, sticker, { quoted: mek })
                     break
                   case 'ttp3':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1507,8 +1500,8 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nContoh: ${prefix + command} Kata`)
                     txt = args.join(" ")
-                    akira = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp3?apikey=${lolhuman}&text=${txt}`)
-                    akira.sendMessage(from, akira, sticker, { quoted: mek })
+                    banxris = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp3?apikey=${lolhuman}&text=${txt}`)
+                    banxris.sendMessage(from, banxris, sticker, { quoted: mek })
                     break
 				case 'ttp4':
 				if (!isRegistered) return reply(ind.noregis())
@@ -1516,8 +1509,8 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nContoh: ${prefix + command} Kata`)
                     txt = args.join(" ")
-                    akira = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp4?apikey=${lolhuman}&text=${txt}`)
-                    akira.sendMessage(from, akira, sticker, { quoted: mek })
+                    banxris = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp4?apikey=${lolhuman}&text=${txt}`)
+                    banxris.sendMessage(from, banxris, sticker, { quoted: mek })
                     break   
 				case 'bokeh':
                  if (!isRegistered) return reply(ind.noregis())
@@ -1527,7 +1520,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/bokeh?apikey=${lolhuman}&text=${ct}`)
-				akira.sendMessage(from, ct, image, {quoted: mek})
+				banxris.sendMessage(from, ct, image, {quoted: mek})
 				await limitAdd(sender)
 				break
 				case 'strawberry':
@@ -1538,7 +1531,7 @@ if (isLimit(sender)) return reply(ind.limitend(pusname))
 				ct = body.slice(10)
 				reply(ind.wait())
 				ct = await getBuffer(`http://api.lolhuman.xyz/api/textprome/strawberry?apikey=${lolhuman}&text=${ct}`)
-				akira.sendMessage(from, ct, image, {quoted: mek})
+				banxris.sendMessage(from, ct, image, {quoted: mek})
 				await limitAdd(sender)
 				break
 				case 'metaldark':
